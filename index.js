@@ -250,6 +250,7 @@ function saveTaskChanges(taskId) {
 /*************************************************************************************************************************************************/
 
 document.addEventListener('DOMContentLoaded', function() {
+  initializeData();
   init(); // init is called after the DOM is fully loaded
 });
 
@@ -259,5 +260,7 @@ function init() {
   toggleSidebar(showSidebar);
   const isLightTheme = localStorage.getItem('light-theme') === 'enabled';
   document.body.classList.toggle('light-theme', isLightTheme);
+  initializeData();
   fetchAndDisplayBoardsAndTasks(); // Initial display of boards and tasks
+
 }
