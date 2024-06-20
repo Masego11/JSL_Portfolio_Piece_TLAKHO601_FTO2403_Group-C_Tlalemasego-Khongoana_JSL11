@@ -10,11 +10,11 @@ import { initialData } from "./initialData.js"; //imported initial data
 
 // Function checks if local storage already has data, if not it loads initialData to localStorage
 function initializeData() {
-  if (!localStorage.getItem('tasks')) {
-    localStorage.setItem('tasks', JSON.stringify(initialData)); 
-    localStorage.setItem('showSideBar', 'true')
+  if (!localStorage.getItem("tasks")) {
+    localStorage.setItem("tasks", JSON.stringify(initialData)); 
+    localStorage.setItem("showSideBar", "true"); // added missing colon and changed to double quotation marks for consitency
   } else {
-    console.log('Data already exists in localStorage');
+    console.log("Data already exists in localStorage");
   }
 }
 
