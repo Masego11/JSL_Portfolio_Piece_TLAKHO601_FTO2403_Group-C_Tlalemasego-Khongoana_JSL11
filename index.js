@@ -135,13 +135,13 @@ function refreshTasksUI() {
 // Styles the active board by adding an active class
 // TASK: Fix Bugs
 function styleActiveBoard(boardName) {
-  document.querySelectorAll('.board-btn').foreach(btn => { 
+  document.querySelectorAll(".board-btn").forEach((btn) => { // Corrected spelling for forEach, enclosed functiion with brackets and single quotation commas with double.
     
     if(btn.textContent === boardName) {
-      btn.add('active') 
+      btn.classList.add("active"); //added classList to the add method and a semi-colon and used double quotation commas
     }
     else {
-      btn.remove('active'); 
+      btn.classList.remove("active"); //addded classList to the remove method and used double quotation commas
     }
   });
 }
