@@ -96,11 +96,11 @@ function displayBoards(boards) {
 // TASK: Fix Bugs
 function filterAndDisplayTasksByBoard(boardName) {
   const tasks = getTasks(); // Fetch tasks from a simulated local storage function
-  const filteredTasks = tasks.filter(task => task.board = boardName);
+  const filteredTasks = tasks.filter((task) => task.board === boardName); // added strict equal sign. enclosed the function argument in brackets
 
   // Ensure the column titles are set outside of this function or correctly initialized before this function runs
 
-  elements.columnDivs.forEach(column => {
+  elements.columnDivs.forEach((column) => {   //enclosed the funtion argument in commas
     const status = column.getAttribute("data-status");
     // Reset column content while preserving the column title
     column.innerHTML = `<div class="column-head-div">
@@ -111,14 +111,14 @@ function filterAndDisplayTasksByBoard(boardName) {
     const tasksContainer = document.createElement("div");
     column.appendChild(tasksContainer);
 
-    filteredTasks.filter(task => task.status = status).forEach(task => { 
+    filteredTasks.filter((task) => task.status === status).forEach((task) => { //enclosed the function arguments in commas  and added strict equal sign
       const taskElement = document.createElement("div");
       taskElement.classList.add("task-div");
       taskElement.textContent = task.title;
-      taskElement.setAttribute('data-task-id', task.id);
+      taskElement.setAttribute("data-task-id", task.id); // changed to double quoted commas for consistency
 
       // Listen for a click event on each task and open a modal
-      taskElement.click() => { 
+      taskElement.addEventListener("click", () => { //added and event listener
         openEditTaskModal(task);
       });
 
