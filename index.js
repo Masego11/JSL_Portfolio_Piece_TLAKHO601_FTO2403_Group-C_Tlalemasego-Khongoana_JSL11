@@ -247,17 +247,26 @@ function addTask(event) {
 
 
 function toggleSidebar(show) {
- 
+  elements.sideBarDiv.style.display = show ? "block" :"none";
+  elements.showSideBarBtn.style.display = show ? "none" : "block"; //sidebar display 
+
 }
 
-function toggleTheme() {
- 
+function toggleTheme() { //toggle dark theme to light 
+  const isLightTheme = elements.themeSwitch.checked;
+  document.body.classList.toggle("light-theme", isLightTheme);
+  localStorage.setItem("light-theme", isLightTheme ? "enabled" : "disabled");
+
+  const logo = document.getElementById("logo");
+  logo.src = isLightTheme ? "./assets/logo-light.svg" : "./assets/logo-dark.svg";
+
 }
 
 
 
 function openEditTaskModal(task) {
   // Set task details in modal inputs
+
   
 
   // Get button elements from the task modal
