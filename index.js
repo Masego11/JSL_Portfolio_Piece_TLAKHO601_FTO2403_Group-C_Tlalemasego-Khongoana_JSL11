@@ -177,10 +177,10 @@ function addTaskToUI(task) {
 function setupEventListeners() {
   // Cancel editing task event listener
   const cancelEditBtn = document.getElementById("cancel-edit-btn");
-  cancelEditBtn.addEventListener("click", () =>  ////added event listener to the arrow function
-  toggleModal(false, elements.editTaskModal));
+  cancelEditBtn.addEventListener("click", () => { ////added event listener to the arrow function
+  toggleModal(false, elements.editTaskModal);
   elements.filterDiv.style.display = "none"; //
-
+});
   // Cancel adding new task event listener
   const cancelAddTaskBtn = document.getElementById("cancel-add-task-btn");
   cancelAddTaskBtn.addEventListener("click", () => {
@@ -279,7 +279,7 @@ const cancelEditBtn = document.getElementById("cancel-edit-btn");
  saveTaskChangesBtn.addEventListener("click", () => {
   saveTaskChanges(task.id);
   elements.editTaskModalWindow.style.display = "none";
-  elements.editTaskModalWindow.style.display = "none";
+  elements.newTaskModalWindow.style.display = "none";
  })
   // Delete task using a helper function and close the task modal
   deleteTaskBtn.addEventListener("click", () =>  {
@@ -296,15 +296,20 @@ const cancelEditBtn = document.getElementById("cancel-edit-btn");
 
 function saveTaskChanges(taskId) {
   // Get new user inputs
-
   // Create an object with the updated task details
-
+  const updatedTask = {
+    id: taskId,
+    title: elements.editTitleInput.value,
+    description: elements.editDescInput.value,
+    status: elements.editStatusSelect.value,
+    board: activeBoard,
+  }
 
   // Update task using a hlper functoin
- 
+ patchTask(updatedTask);
 
   // Close the modal and refresh the UI to reflect the changes
-
+  elements.editTaskModalWindow.sytle.display = "none";
   refreshTasksUI();
 }
 
