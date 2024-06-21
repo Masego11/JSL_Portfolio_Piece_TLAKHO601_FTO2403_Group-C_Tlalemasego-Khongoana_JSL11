@@ -77,7 +77,7 @@ function fetchAndDisplayBoardsAndTasks() {
 // TASK: Fix Bugs
 function displayBoards(boards) {
   const boardsContainer = document.getElementById("boards-nav-links-div");
-  boardsContainer.innerHTML = " "; // Clears the container-changed to double quotation for consistency 
+  boardsContainer.innerHTML = ""; // Clears the container-changed to double quotation for consistency 
   boards.forEach((board) => {  //enclosed the argument in brackets
     const boardElement = document.createElement("button");
     boardElement.textContent = board;
@@ -122,6 +122,7 @@ function filterAndDisplayTasksByBoard(boardName) {
       // Listen for a click event on each task and open a modal
       taskElement.addEventListener("click", () => { //added and event listener
         openEditTaskModal(task);
+        elements.editTaskModalWindow.style.display = "block";
       });
 
       tasksContainer.appendChild(taskElement);
@@ -267,8 +268,8 @@ function toggleTheme() { //toggle dark theme to light
 function openEditTaskModal(task) {
   // Set task details in modal inputs
 elements.editTitleInput.value = task.title;  
-elements.editDescInput.value = task.title;
-elements.editStatusSelect.value =task.title;  
+elements.editDescInput.value = task.description;
+elements.editStatusSelect.value =task.status;  
 
   // Get button elements from the task modal
 const saveTaskChangesBtn = document.getElementById("save-task-changes-btn");
@@ -298,7 +299,6 @@ function saveTaskChanges(taskId) {
   // Get new user inputs
   // Create an object with the updated task details
   const updatedTask = {
-    id: taskId,
     title: elements.editTitleInput.value,
     description: elements.editDescInput.value,
     status: elements.editStatusSelect.value,
@@ -306,7 +306,7 @@ function saveTaskChanges(taskId) {
   }
 
   // Update task using a hlper functoin
- patchTask(updatedTask);
+ putTask(taskId, updatedTask);
 
   // Close the modal and refresh the UI to reflect the changes
   elements.editTaskModalWindow.sytle.display = "none";
