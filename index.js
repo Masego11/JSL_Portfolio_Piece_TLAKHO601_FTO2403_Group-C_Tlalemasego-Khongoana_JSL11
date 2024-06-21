@@ -75,18 +75,18 @@ function fetchAndDisplayBoardsAndTasks() {
 // TASK: Fix Bugs
 function displayBoards(boards) {
   const boardsContainer = document.getElementById("boards-nav-links-div");
-  boardsContainer.innerHTML = ''; // Clears the container
-  boards.forEach(board => {
+  boardsContainer.innerHTML = " "; // Clears the container-changed to double quotation for consistency 
+  boards.forEach((board) => {  //enclosed the argument in brackets
     const boardElement = document.createElement("button");
     boardElement.textContent = board;
     boardElement.classList.add("board-btn");
-    boardElement.click()  { 
+    boardElement.addEventListener("click", () => { //added addEventlistener and completed the arrow function 
       elements.headerBoardName.textContent = board;
       filterAndDisplayTasksByBoard(board);
-      activeBoard = board //assigns active board
-      localStorage.setItem("activeBoard", JSON.stringify(activeBoard))
-      styleActiveBoard(activeBoard)
-    };
+      activeBoard = board; //assigns active board- added semi-colon
+      localStorage.setItem("activeBoard", JSON.stringify(activeBoard)); // added semi-colon
+      styleActiveBoard(activeBoard); //added semi- colon
+    });
     boardsContainer.appendChild(boardElement);
   });
 
