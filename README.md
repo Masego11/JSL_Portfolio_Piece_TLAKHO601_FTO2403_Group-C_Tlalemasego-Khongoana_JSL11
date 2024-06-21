@@ -1,57 +1,6 @@
 ### [JSL11] Agile Board - Kanban Task Management App
 
-Welcome to the Agile Board project, the final project for the JSL course! In this portfolio piece project, you will be stepping into the shoes of a juniour developer tasked with bringing a Kanban Task Management App to life. You're not starting from scratch, though. In this project, you are tasked with tackling the provided user stories to both identify and fix bugs in the code, as well as to develop your own functions to extend the application's capabilities. Key assignments include importing utility functions, initializing data, and diving into debugging tasks such as setting up data correctly in local storage, dynamically displaying boards and tasks, and enhancing user interactions.
-
-Additionally, you will enhance the application by crafting code to meet specific functionalities outlined in the user stories, like managing task details and their lifecycle, toggling theme customization, and ensuring the persistence of data through local storage. This blend of debugging and creative coding invites you to apply your critical thinking and problem-solving skills in a hands-on manner, equipping you for the intricacies of real-world software development scenarios.
-
-We're providing you with a head start:
-
-- **Starter Code**: You will receive starter code for the user interface (UI) of the application. This includes the basic layout and some of the JavaScript (JS) functionality needed to make the app interactive.
-
-- **Your Mission**: Your main task is to complete the app by implementing the features described in the provided user stories. These stories outline the functionality that users expect from the app, such as adding, editing, and deleting tasks, as well as customizing themes and managing the task lifecycle.
-
-- **🪲Important Note on Debugging🚨:** In the sections of the project where you are tasked with debugging the code, *it's crucial to focus on identifying and correcting errors within the existing functions rather than undertaking a complete refactoring of the code.* This means you will need to carefully analyze the provided starter code to pinpoint syntax errors, logical mistakes, or any bugs that prevent the application from functioning as intended. **The goal is to improve and repair the codebase by making precise adjustments, ensuring that the original structure, function logic and intended functionality are preserved.** This approach not only aligns with the project's requirements but also hones the essential skill of debugging— a critical competency for any developer.
-
-### Walkthrough by Coach Kenneth
-
-Jump into the walkthrough of the project and starter code here: https://www.youtube.com/watch?v=aD8Wx9PGYSc
-
-### Project Overview
-
-As a newly hired developer at Agile Board, a fictional company specializing in innovative task management solutions, you'll embark on an exciting journey to enhance their flagship Kanban Task Management App.
-
-![alt text](assets/JSL11_solution.gif)
-
-Your journey through this project will involve several key activities:
-
-1. **Exploring the Starter Code**: Begin by familiarizing yourself with the UI and JS functionality we've provided. This will give you a solid understanding of the project's current state and what needs to be done.
-2. **Completing User Stories**: Dive into the user stories, which are your roadmap to completing the project. Each story is a feature or functionality that your app needs to support. Your goal is to write the JS code necessary to bring these stories to life.
-3. **Testing and Debugging**: As you implement each feature, test your app to ensure it works as expected. Debug any issues that arise to ensure a smooth user experience.
-4. **Reflecting on Your Work**: Once you've completed the user stories, take a step back and review your app. Consider the challenges you faced, what you learned, and how you might improve the app further.
-
-This project is designed to be both challenging and rewarding, providing you with hands-on experience in web development. By the end, you'll have a functional Kanban Task Management App that you can showcase in your portfolio. Ready to get started? Let's dive in!
-
-## What You Need to Do:
-
-To complete this challenge, follow these steps:
-
-1. Clone the provided Starter Code Repository to your local development environment: [Starter Code Repository](https://github.com/CodeSpace-Academy/Final_Project_StudentNo_Classcode_Group_Name-Surname_JSL11).
-2. Open the cloned project in your code editor.
-3. Code your solution to the user stories.
-4. Commit your changes to your local Git repository with meaningful commit messages.
-5. Push your local Git repository to your GitHub account.
-6. Verify that the changes have been successfully pushed to your GitHub repository.
-
-🚨 Make sure that you clear the localStorage as you are building your project. This will help with checking that the tasks are loading correctly. 
-
-![alt text](assets/clear-localStorage.gif)
-
-
-
-## What You Need to Include:
-
-1. Ensure that your code includes the necessary modifications to meet the challenge requirements.
-2. Your GitHub repository should contain the updated code files.
+# Loom presentation link (https://www.loom.com/share/4279aa97c08d4666bd9c82616cda2b22?sid=646e99a6-3280-4777-80dc-926c74e447fa)
 
 # Agile Board Project Feature List
 
