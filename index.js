@@ -138,7 +138,7 @@ function styleActiveBoard(boardName) {
   document.querySelectorAll(".board-btn").forEach((btn) => { // Corrected spelling for forEach, enclosed functiion with brackets and single quotation commas with double.
     
     if(btn.textContent === boardName) {
-      btn.classList.add("active"); //added classList to the add method and a semi-colon and used double quotation commas
+      btn.classList.add("active"); //added classList to the add method and a semi-colon and used double quotation
     }
     else {
       btn.classList.remove("active"); //addded classList to the remove method and used double quotation commas
@@ -154,20 +154,20 @@ function addTaskToUI(task) {
     return;
   }
 
-  let tasksContainer = column.querySelector('.tasks-container');
+  let tasksContainer = column.querySelector(".tasks-container");
   if (!tasksContainer) {
     console.warn(`Tasks container not found for status: ${task.status}, creating one.`);
-    tasksContainer = document.createElement('div');
-    tasksContainer.className = 'tasks-container';
+    tasksContainer = document.createElement("div");
+    tasksContainer.className = "tasks-container";
     column.appendChild(tasksContainer);
   }
 
-  const taskElement = document.createElement('div');
-  taskElement.className = 'task-div';
+  const taskElement = document.createElement("div");
+  taskElement.className = "task-div";
   taskElement.textContent = task.title; // Modify as needed
-  taskElement.setAttribute('data-task-id', task.id);
+  taskElement.setAttribute("data-task-id", task.id);
   
-  tasksContainer.appendChild(); 
+  tasksContainer.appendChild(taskElement); // added an argument to the appendChild method 
 }
 
 
