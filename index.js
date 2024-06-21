@@ -1,5 +1,5 @@
 // TASK: import helper functions from utils
-import { getTasks, createNewTask, patchTask, putTask, deleteTask} from ".utils/taskFunction.js"; //imported task functions
+import { getTasks, createNewTask, patchTask, putTask, deleteTask} from "./utils/taskFunctions.js"; //imported task functions
 import { initialData } from "./initialData.js"; //imported initial data 
 // TASK: import initialData
 
@@ -217,7 +217,7 @@ function setupEventListeners() {
 // Toggles tasks modal
 // Task: Fix bugs
 function toggleModal(show, modal = elements.modalWindow) {
-  modal.style.display = show ? 'block' => 'none'; 
+  modal.style.display = show ? "block" : "none";  //replaced arrowfunction with colon
 }
 
 /*************************************************************************************************************************************************
@@ -229,13 +229,17 @@ function addTask(event) {
 
   //Assign user input to the task object
     const task = {
-      
+      title: document.getElementById("title-input").value,
+      description: document.getElementById("desc-input").value,
+      status: document.getElementById("select-status").value, 
+      board: activeBoard,
+ 
     };
     const newTask = createNewTask(task);
     if (newTask) {
       addTaskToUI(newTask);
       toggleModal(false);
-      elements.filterDiv.style.display = 'none'; // Also hide the filter overlay
+      elements.filterDiv.style.display = "none"; // Also hide the filter overlay
       event.target.reset();
       refreshTasksUI();
     }
