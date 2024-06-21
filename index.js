@@ -64,9 +64,9 @@ function fetchAndDisplayBoardsAndTasks() {
   displayBoards(boards);
   if (boards.length > 0) {
     const localStorageBoard = JSON.parse(localStorage.getItem("activeBoard"))
-    activeBoard = localStorageBoard ? localStorageBoard ;  boards[0]; 
-    elements.headerBoardName.textContent = activeBoard
-    styleActiveBoard(activeBoard)
+    activeBoard = localStorageBoard ? localStorageBoard :  boards[0]; // replaced semi-colon with colon in the ternary operator 
+    elements.headerBoardName.textContent = activeBoard; // added semi-colon
+    styleActiveBoard(activeBoard); // added semi-colon
     refreshTasksUI();
   }
 }
