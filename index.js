@@ -20,6 +20,37 @@ function initializeData() {
 
 // TASK: Get elements from the DOM
 const elements = {
+  themeSwitch: document.getElementById("switch"), // to attach an eventlistener that toggles between dark and light mode
+  hideSideBarBtn: document.getElementById("hide-side-bar-btn"),// to attach an event listener that hides the sidebar
+  showSideBarBtn: document.getElementById("show-side-bar-btn"), //to attach an event listener that displays the sidebar 
+  headerBoardName: document.getElementById("header-board-name"), // to update the board name displayed in the header when switching from on board to another 
+  columnDivs :document.querySelectorAll(".column-div"), //to update the tasks lists within each column
+  modalWindow: document.querySelector(".modal-window"), // to toggle the visibility of the add new task when creating new tasks 
+  filterDiv: document.getElementById("filterDiv"), // to show or hide the overlay filter when modals are open 
+  addNewTaskBtn: document.getElementById("add-new-task-btn"), // to attach an event listener that opens the add new task window
+  editTaskModalWindow: document.querySelector(".edit-task-modal-window"), // to toggle the task modal when editing existing tasks 
+  newTaskModalWindow: document.getElementById("new-task-modal-window"), // to add modal window 
+  tasksContainer: document.querySelectorAll(".tasks-container"), // a list of elements with the class task-container holding task items
+  editBoardBtn: document.getElementById("edit-board-btn"), //to open the board editing options
+  deleteBoardBtn: document.getElementById("deleteBoardBtn"), // to delete the current board 
+  sideBarDiv: document.getElementById("side-bar-div"), // the div element that represents the the sidebar of the application
+  layout: document.getElementById("layout"), // element representing the main layout container
+  switchCheckbox: document.getElementById("switch"), // toggle switch for switching themes
+  createTaskBtn: document.getElementById("create-task-btn"), // button for creating new task
+  editTaskForm: document.getElementById("edit-task-form"), // form used for editing existing tasks
+  cancelEditBtn: document.getElementById("cancel-edit-btn"), // button that cancels the edit operation
+  cancelAddTaskBtn: document.getElementById("cancel-add-task-btn"), // button that cancels adding a new task
+  titleInput: document.getElementById("title-input"),  // input field for entering a new task title
+  descriptionInput: document.getElementById("desc-input"), // input field for entering a task description
+  selectStatus: document.getElementById("select-status"), // element for choosing the status of a new task
+  editTitleInput: document.getElementById("edit-task-title-input"), // input field for editing the title of an existing task
+  editDescInput: document.getElementById("edit-task-desc-input"), // input field for editing the description of an existing task
+  editStatusSelect: document.getElementById("edit-select-status"), // select element for editing the status of an existing task
+  saveTaskChangesBtn: document.getElementById("save-task-changes-btn"), // button to save changes made to an existing task
+  deleteTaskBtn: document.getElementById("delete-task-btn"), // button to delet existing task
+  cancelEditBtn: document.getElementById("cancel-edit-btn"), // button to cancel task editing operation
+  boardsNavlinksDiv: document.getElementById("boards-nav-links-div"), // the div containing the navigation boards within the app
+
 
 }
 
