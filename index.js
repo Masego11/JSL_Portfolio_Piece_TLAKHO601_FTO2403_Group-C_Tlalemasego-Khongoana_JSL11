@@ -203,7 +203,7 @@ function setupEventListeners() {
   elements.themeSwitch.addEventListener("change", toggleTheme);
 
   // Show Add New Task Modal event listener
-  elements.createNewTaskBtn.addEventListener("click", () => {
+  elements.addNewTaskBtn.addEventListener("click", () => {
     toggleModal(true);
     elements.filterDiv.style.display = "block"; // Also show the filter overlay
   });
@@ -266,24 +266,36 @@ function toggleTheme() { //toggle dark theme to light
 
 function openEditTaskModal(task) {
   // Set task details in modal inputs
-
-  
+elements.editTitleInput.value = task.title;  
+elements.editDescInput.value = task.title;
+elements.editStatusSelect.value =task.title;  
 
   // Get button elements from the task modal
-
+const saveTaskChangesBtn = document.getElementById("save-task-changes-btn");
+const deleteTaskBtn = document.getElementById("delete-task-btn");
+const cancelEditBtn = document.getElementById("cancel-edit-btn");
 
   // Call saveTaskChanges upon click of Save Changes button
- 
-
+ saveTaskChangesBtn.addEventListener("click", () => {
+  saveTaskChanges(task.id);
+  elements.editTaskModalWindow.style.display = "none";
+  elements.editTaskModalWindow.style.display = "none";
+ })
   // Delete task using a helper function and close the task modal
-
-
+  deleteTaskBtn.addEventListener("click", () =>  {
+    deleteTask(task.id);
+    elements.editTaskModalWindow.style.display = "none";
+    elements.newTaskModalWindow.style.display = "none";
+    refreshTasksUI();
+  });
+  cancelEditBtn.addEventListener("click", () => {
+    elements.editTaskModalWindow.style.display = "none"
+});
   toggleModal(true, elements.editTaskModal); // Show the edit task modal
 }
 
 function saveTaskChanges(taskId) {
   // Get new user inputs
-  
 
   // Create an object with the updated task details
 
